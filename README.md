@@ -17,7 +17,7 @@ UNet is a SOTA segmentation model and used popularly in medical images segmentat
 ! bash download.sh
 ```
 
-- Run infer.py file
+- Run infer.py file. Note that the infer.py has been configured for Kaggle competition running. In case that you want to run locally, fix the path in [infer.py](./infer.py)
 ```bash
 ! python infer.py
 ```

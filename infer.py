@@ -23,7 +23,7 @@ transform = Compose([
 
 model = Unet(in_channels=3, 
              num_classes=num_classes)
-checkpoint = torch.load(pretrained_path, map_location=device)['model']
+checkpoint = torch.load(trained_path, map_location=device)['model']
 
 new_checkpoint = dict()
 for k in checkpoint:
@@ -57,7 +57,7 @@ class UNetTestDataClass(Dataset):
     
 path = '/kaggle/input/bkai-igh-neopolyp/test/test'
 unet_test_dataset = UNetTestDataClass(path, transform)
-test_dataloader = DataLoader(unet_test_dataset, batch_size=1, shuffle=False)
+test_dataloader = DataLoader(unet_test_dataset, batch_size=4, shuffle=False)
 
 model.eval()
 if not os.path.isdir("./predicted_masks"):

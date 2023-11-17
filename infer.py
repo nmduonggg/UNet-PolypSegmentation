@@ -55,7 +55,7 @@ class UNetTestDataClass(Dataset):
     def __len__(self):
         return len(self.images_list)
     
-path = '/kaggle/input/bkai-igh-neopolyp/test/test'
+path = '/kaggle/input/bkai-igh-neopolyp/test/test/'
 unet_test_dataset = UNetTestDataClass(path, transform)
 test_dataloader = DataLoader(unet_test_dataset, batch_size=4, shuffle=False)
 

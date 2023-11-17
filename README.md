@@ -1,6 +1,6 @@
 # Medical Segmentation - Polyp Detection using UNet
 
-UNet is a SOTA segmentation model and used popularly in medical images segmentation. Its structure is simply the combination of Convolution, BatchNorm, and an fully connected network as the feature extractor. In this repo, I use ResNet50 as an extractor thanks for this nice [repository](https://github.com/mberkay0/pretrained-backbones-unet)
+UNet is a SOTA segmentation model and used popularly in medical images segmentation. Its structure is simply the combination of Convolution, BatchNorm, and an fully connected network as the feature extractor. In this repo, I use ResNet50 as an extractor thanks to this nice [repository](https://github.com/mberkay0/pretrained-backbones-unet). This repository contains solution for the last year Kaggle [competition](https://www.kaggle.com/competitions/bkai-igh-neopolyp/overview). The trained weight can be found via this bash [file](./download.sh)
 
 ![ResUNet](https://th.bing.com/th?id=OIP.lvXoKMHoPJMKpKK7keZMEAHaE7&w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2)
 

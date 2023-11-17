@@ -16,7 +16,7 @@ from backbones_unet.model.unet import Unet
 from configs import *
 
 device='cuda:0' if torch.cuda.is_available() else 'cpu'
-trained_path = '/mnt/disk1/nmduong/hust/bkai-igh-polyp/UNet-PolypDetection/output/unet_model.pth'
+trained_path = './unet_model.pth'
 transform = Compose([
     Resize((512, 512)),
     PILToTensor()])
@@ -55,8 +55,7 @@ class UNetTestDataClass(Dataset):
     def __len__(self):
         return len(self.images_list)
     
-path = '/mnt/disk1/nmduong/hust/bkai-igh-polyp/data/test/test/'
-# path = '/mnt/disk1/nmduong/hust/bkai-igh-polyp/data/valid/valid/'
+path = '/kaggle/input/bkai-igh-neopolyp/test/test'
 unet_test_dataset = UNetTestDataClass(path, transform)
 test_dataloader = DataLoader(unet_test_dataset, batch_size=1, shuffle=False)
 

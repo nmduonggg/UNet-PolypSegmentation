@@ -8,14 +8,12 @@
 ! cd /kaggle/working/UNet-PolypDetection
 ```
 
-- Run infer.py file
+- Download trained weights
 ```bash
-# kaggle
-! python infer.py --mode 'kaggle'
+! bash download.sh
 ```
 
-or :
+- Run infer.py file
 ```bash
-# local
-! python infer.py --mode 'local'
+! python infer.py
 ```

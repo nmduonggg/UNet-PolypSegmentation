@@ -25,11 +25,11 @@ model = Unet(in_channels=3,
              num_classes=num_classes)
 checkpoint = torch.load(trained_path, map_location=device)['model']
 
-new_checkpoint = dict()
-for k in checkpoint:
-    new_checkpoint[k[7:]] = checkpoint[k]
+# new_checkpoint = dict()
+# for k in checkpoint:
+#     new_checkpoint[k[7:]] = checkpoint[k]
     
-model.load_state_dict(new_checkpoint)
+model.load_state_dict(checkpoint)
 model.to(device)
 
 class UNetTestDataClass(Dataset):

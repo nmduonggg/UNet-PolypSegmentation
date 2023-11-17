@@ -1,4 +1,4 @@
-# Medical Image Segmentation - Polyp Detection using UNet
+# Medical Segmentation - Polyp Detection using UNet
 
 UNet is a SOTA segmentation model and used popularly in medical images segmentation. Its structure is simply the combination of Convolution, BatchNorm, and an fully connected network as the feature extractor. In this repo, I use ResNet50 as an extractor thanks for this nice [repository](https://github.com/mberkay0/pretrained-backbones-unet)
 
@@ -8,22 +8,22 @@ UNet is a SOTA segmentation model and used popularly in medical images segmentat
 
 - Installing necessary libraries for pretrained
 ```bash
-!pip install git+https://github.com/mberkay0/pretrained-backbones-unet
+!pip install git+https://github.com/mberkay0/pretrained-backbones-unet -q
 ```
 
 - Setting on Kaggle, if you run on local machine, you can skip this step:
 ```bash
-! git clone https://github.com/nmduonggg/UNet-PolypSegmentation.git
+!git clone https://github.com/nmduonggg/UNet-PolypSegmentation.git
 %cd /kaggle/working/UNet-PolypSegmentation
 ```
 
 - Download trained weights
 ```bash
-! bash download.sh
+!bash download.sh
 ```
 
 - Run infer.py file. Note that the infer.py has been configured for Kaggle competition running. In case that you want to run locally, fix the path in [infer.py](./infer.py)
 ```bash
-! python infer.py
+!python infer.py
 ```
 
